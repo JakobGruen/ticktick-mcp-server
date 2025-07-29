@@ -26,5 +26,5 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t ${{ secrets.ACR_SERVER }}/{{ secrets.ACR_IMAGE }}:${{ github.sha }} .
-          docker push ${{ secrets.ACR_SERVER }}/{{ secrets.ACR_IMAGE }}:${{ github.sha }}
+          docker build -t ${{ secrets.ACR_SERVER }}/${{ secrets.ACR_IMAGE }}:${{ github.sha }} .
+          docker push ${{ secrets.ACR_SERVER }}/${{ secrets.ACR_IMAGE }}:${{ github.sha }}
